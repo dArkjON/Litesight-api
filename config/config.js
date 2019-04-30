@@ -58,7 +58,7 @@ var isLinux = /^linux/.test(process.platform);
 if (!dataDir) {
   if (isWin) dataDir = '%APPDATA%\\Bitcore\\';
   if (isMac) dataDir = process.env.HOME + '/Library/Application Support/Bitcore/';
-  if (isLinux) dataDir = process.env.HOME + '/.bitcore/';
+  if (isLinux) dataDir = process.env.HOME + '/.bitcre/'; // Import Files not availible for Bitcore atm
 }
 dataDir += network === 'testnet' ? 'testnet3' : '';
 
