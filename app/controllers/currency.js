@@ -43,7 +43,7 @@ exports.index = function(req, res) {
   if (btceusdRate === 0 || currentTime >= (timestamp + delay)) {
     timestamp = currentTime;
 
-    _request('https://api.coinmarketcap.com/v1/ticker/litecoin/?convert=USD', function(err, data) {
+    _request('https://api.coinmarketcap.com/v1/ticker/Bitcore/?convert=USD', function(err, data) {
       if (!err) btceusdRate = parseFloat(JSON.parse(data).price_usd).toFixed(10);
 
       res.jsonp({
